@@ -64,7 +64,15 @@
   noButton.addEventListener('mouseover', moveNoButton);
 
   noButton.addEventListener('click', () => {
-    noButton.textContent = 'YES';<!DOCTYPE html>
+    noButton.textContent = 'YES';
+    noButton.disabled = true;
+    noButton.style.opacity = 0.5;
+  });
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8" />
@@ -114,13 +122,6 @@
   }
 
   setInterval(createHeart, 300);
-</script>
-
-</body>
-</html>
-    noButton.disabled = true;
-    noButton.style.opacity = 0.5;
-  });
 </script>
 
 </body>
