@@ -71,3 +71,58 @@
 
 </body>
 </html>
+
+
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<title>รักนะครับ</title>
+<style>
+  body {
+    background-color: pink;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+  }
+  h1 {
+    margin-top: 40px;
+    color: red;
+    font-size: 40px;
+  }
+  .heart {
+    position: absolute;
+    color: red;
+    font-size: 24px;
+    animation: floatUp 5s linear forwards;
+  }
+  @keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-800px) scale(1.5); opacity: 0; }
+  }
+</style>
+</head>
+<body>
+
+<h1>รักนะครับ จุบๆ 💕</h1>
+
+<script>
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.textContent = '💖';
+    heart.style.left = Math.random() * window.innerWidth + 'px';
+    heart.style.bottom = '0px';
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 5000);
+  }
+
+  setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
